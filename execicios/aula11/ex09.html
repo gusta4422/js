@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pais</title>
+    <style>
+        body {
+            font: normal 1.2em arial;
+            background-color: lightgray;
+            text-align: center;
+        }
+
+        input{
+            border-radius: 5px;
+            border: none;
+            width: 30%;
+            height: 30px;
+            margin: 10px;
+            float: bottom;
+        }
+    </style>
+</head>
+<body>
+    <h1>Brasileiro? Sim ou não</h1>
+    <label for="pais">Qual seu pais:</label>
+    <input type="text" id="pais" placeholder="Primeira letra maiúscula Ex: Brasil">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function verificar() {
+        var pais = document.getElementById('pais')
+        var res = document.getElementById('res')
+        if (pais.value == 'Brasil') { 
+            res.innerHTML += `<p>Você é Brasileiro(a)!`
+        } else {
+            res.innerHTML += `<p>Você não  Estrangeiro(a).`
+         }
+    }
+    </script>
+</body>
+</html>
+
+
